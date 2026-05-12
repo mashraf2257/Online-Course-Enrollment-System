@@ -1,0 +1,241 @@
+[ {
+  "courseId" : "MATH203",
+  "name" : "Differential Equations",
+  "instructor" : "Dr. Omar",
+  "major" : "Engineering",
+  "capacity" : 60,
+  "enrolledCount" : 38,
+  "credits" : 4,
+  "prerequisites" : [ "MATH102" ],
+  "full" : false
+}, {
+  "courseId" : "MATH210",
+  "name" : "Calculus III",
+  "instructor" : "Dr. Nour",
+  "major" : "Engineering",
+  "capacity" : 60,
+  "enrolledCount" : 39,
+  "credits" : 4,
+  "prerequisites" : [ "MATH102" ],
+  "full" : false
+}, {
+  "courseId" : "MATH101",
+  "name" : "Calculus I",
+  "instructor" : "Dr. Euler",
+  "major" : "Engineering",
+  "capacity" : 60,
+  "enrolledCount" : 53,
+  "credits" : 4,
+  "prerequisites" : [ ],
+  "full" : false
+}, {
+  "courseId" : "MATH211",
+  "name" : "Discrete Mathematics",
+  "instructor" : "Dr. Zahra",
+  "major" : "Engineering",
+  "capacity" : 60,
+  "enrolledCount" : 37,
+  "credits" : 4,
+  "prerequisites" : [ "MATH101" ],
+  "full" : false
+}, {
+  "courseId" : "MATH102",
+  "name" : "Calculus II",
+  "instructor" : "Dr. Gauss",
+  "major" : "Engineering",
+  "capacity" : 60,
+  "enrolledCount" : 44,
+  "credits" : 4,
+  "prerequisites" : [ "MATH101" ],
+  "full" : false
+}, {
+  "courseId" : "MATH201",
+  "name" : "Probability and Statistics",
+  "instructor" : "Dr. Hassan",
+  "major" : "Computer Science",
+  "capacity" : 60,
+  "enrolledCount" : 47,
+  "credits" : 4,
+  "prerequisites" : [ "MATH102" ],
+  "full" : false
+}, {
+  "courseId" : "CSCI112",
+  "name" : "Intermediate Programming",
+  "instructor" : "Dr. Ahmed",
+  "major" : "Computer Science",
+  "capacity" : 60,
+  "enrolledCount" : 36,
+  "credits" : 4,
+  "prerequisites" : [ "CSCI101" ],
+  "full" : false
+}, {
+  "courseId" : "CSCI310",
+  "name" : "Operating Systems",
+  "instructor" : "Dr. Tanenbaum",
+  "major" : "Computer Science",
+  "capacity" : 40,
+  "enrolledCount" : 25,
+  "credits" : 4,
+  "prerequisites" : [ "CSCI207" ],
+  "full" : false
+}, {
+  "courseId" : "CSCI101",
+  "name" : "Introduction to Computer Science",
+  "instructor" : "Dr. Smith",
+  "major" : "Computer Science",
+  "capacity" : 60,
+  "enrolledCount" : 57,
+  "credits" : 4,
+  "prerequisites" : [ ],
+  "full" : false
+}, {
+  "courseId" : "CSCI401",
+  "name" : "Software Engineering",
+  "instructor" : "Dr. Brooks",
+  "major" : "Computer Science",
+  "capacity" : 35,
+  "enrolledCount" : 20,
+  "credits" : 4,
+  "prerequisites" : [ "CSCI301" ],
+  "full" : false
+}, {
+  "courseId" : "ARTS101",
+  "name" : "Introduction to Photography",
+  "instructor" : "Dr. Russo",
+  "major" : "ARTS",
+  "capacity" : 60,
+  "enrolledCount" : 54,
+  "credits" : 3,
+  "prerequisites" : [ ],
+  "full" : false
+}, {
+  "courseId" : "CSCI301",
+  "name" : "Database Systems",
+  "instructor" : "Dr. Codd",
+  "major" : "Computer Science",
+  "capacity" : 45,
+  "enrolledCount" : 30,
+  "credits" : 4,
+  "prerequisites" : [ "CSCI207" ],
+  "full" : false
+}, {
+  "courseId" : "CSCI350",
+  "name" : "Computer Networks",
+  "instructor" : "Dr. Kurose",
+  "major" : "Computer Science",
+  "capacity" : 40,
+  "enrolledCount" : 28,
+  "credits" : 3,
+  "prerequisites" : [ "CSCI207" ],
+  "full" : false
+}, {
+  "courseId" : "CSCI221",
+  "name" : "Logic Design",
+  "instructor" : "Dr. Rania",
+  "major" : "Computer Science",
+  "capacity" : 60,
+  "enrolledCount" : 32,
+  "credits" : 4,
+  "prerequisites" : [ "CSCI101" ],
+  "full" : false
+}, {
+  "courseId" : "CSCI208",
+  "name" : "Design and Analysis of Algorithms",
+  "instructor" : "Dr. Khalid",
+  "major" : "Computer Science",
+  "capacity" : 60,
+  "enrolledCount" : 60,
+  "credits" : 3,
+  "prerequisites" : [ "CSCI207" ],
+  "full" : true
+}, {
+  "courseId" : "122",
+  "name" : "cs1012",
+  "instructor" : "ali",
+  "major" : "Computer Science",
+  "capacity" : 60,
+  "enrolledCount" : 0,
+  "credits" : 3,
+  "prerequisites" : [ "cs101" ],
+  "full" : false
+}, {
+  "courseId" : "ENGL202",
+  "name" : "Communication Skills",
+  "instructor" : "Dr. Garcia",
+  "major" : "ENGL",
+  "capacity" : 40,
+  "enrolledCount" : 39,
+  "credits" : 3,
+  "prerequisites" : [ "ENGL102" ],
+  "full" : false
+}, {
+  "courseId" : "CSCI207",
+  "name" : "Data Structures and Algorithms",
+  "instructor" : "Dr. Patel",
+  "major" : "Computer Science",
+  "capacity" : 60,
+  "enrolledCount" : 28,
+  "credits" : 4,
+  "prerequisites" : [ "CSCI112" ],
+  "full" : false
+}, {
+  "courseId" : "ENGL102",
+  "name" : "English II",
+  "instructor" : "Dr. Williams",
+  "major" : "ENGL",
+  "capacity" : 40,
+  "enrolledCount" : 30,
+  "credits" : 3,
+  "prerequisites" : [ "ENGL101" ],
+  "full" : false
+}, {
+  "courseId" : "ENGL201",
+  "name" : "Writing Skills",
+  "instructor" : "Dr. Bennett",
+  "major" : "ENGL",
+  "capacity" : 40,
+  "enrolledCount" : 33,
+  "credits" : 3,
+  "prerequisites" : [ "ENGL102" ],
+  "full" : false
+}, {
+  "courseId" : "ENGL101",
+  "name" : "English I",
+  "instructor" : "Dr. Thompson",
+  "major" : "ENGL",
+  "capacity" : 40,
+  "enrolledCount" : 38,
+  "credits" : 3,
+  "prerequisites" : [ ],
+  "full" : false
+}, {
+  "courseId" : "CSCI217",
+  "name" : "Advanced Computer Programming",
+  "instructor" : "Dr. Lee",
+  "major" : "CS",
+  "capacity" : 60,
+  "enrolledCount" : 60,
+  "credits" : 4,
+  "prerequisites" : [ "CSCI112" ],
+  "full" : true
+}, {
+  "courseId" : "PHYS101",
+  "name" : "General Physics I",
+  "instructor" : "Dr. Curie",
+  "major" : "Engineering",
+  "capacity" : 60,
+  "enrolledCount" : 49,
+  "credits" : 4,
+  "prerequisites" : [ ],
+  "full" : false
+}, {
+  "courseId" : "PHYS201",
+  "name" : "General Physics II",
+  "instructor" : "Dr. Feynman",
+  "major" : "Engineering",
+  "capacity" : 50,
+  "enrolledCount" : 35,
+  "credits" : 4,
+  "prerequisites" : [ "PHYS101", "MATH101" ],
+  "full" : false
+} ]

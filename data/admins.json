@@ -1,0 +1,13 @@
+[ {
+  "adminId" : "A001",
+  "password" : "admin123",
+  "role" : "SUPER",
+  "admin" : false,
+  "super" : false
+}, {
+  "adminId" : "A002",
+  "password" : "staff123",
+  "role" : "STAFF",
+  "admin" : false,
+  "super" : false
+} ]

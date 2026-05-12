@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<HBox prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.student_uifx.MyCoursesController">
+    <stylesheets><URL value="@theme.css" /></stylesheets>
+    <children>
+
+                    <!-- ══════ SIDEBAR ══════ -->
+        <VBox maxWidth="230.0" minWidth="230.0" prefWidth="230.0" styleClass="sidebar sidebar-overlay">
+            <children>
+                <HBox alignment="CENTER" style="-fx-padding: 10 0 20 0;">
+                    <ImageView fitHeight="120.0" fitWidth="180.0" preserveRatio="true" styleClass="brand-logo" />
+                </HBox>
+                <Button onAction="#goToDashboard" styleClass="nav-item" text="Dashboard">
+                    <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" preserveRatio="true" styleClass="nav-icon">
+                     <image>
+                        <Image url="@Icons/menu.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                </Button>
+                <Button onAction="#goToMyCourses" styleClass="nav-item" text="My Courses">
+                    <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" preserveRatio="true" styleClass="nav-icon">
+                     <image>
+                        <Image url="@Icons/graduation.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                </Button>
+                <Button onAction="#goToCourseCatalog" styleClass="nav-item" text="Course Catalog">
+                    <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" preserveRatio="true" styleClass="nav-icon">
+                     <image>
+                        <Image url="@Icons/open-book.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                </Button>
+                <Button onAction="#goToEnrollmentCart" styleClass="nav-item" text="Enrollment Cart">
+                    <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" preserveRatio="true" styleClass="nav-icon">
+                     <image>
+                        <Image url="@Icons/shopping-cart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                </Button>
+                <Region VBox.vgrow="ALWAYS" />
+                <Button onAction="#handleSettings" styleClass="nav-item" text="System Settings">
+                    <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" preserveRatio="true" styleClass="nav-icon">
+                     <image>
+                        <Image url="@Icons/settings.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                </Button>
+                <Button onAction="#handleSignOut" styleClass="nav-item" text="Sign Out">
+                    <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" preserveRatio="true" styleClass="nav-icon">
+                     <image>
+                        <Image url="@Icons/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                </Button>
+            </children>
+        </VBox>
+
+        <!-- ══════ MAIN CONTENT ══════ -->
+        <VBox spacing="0" styleClass="content content-with-sidebar" HBox.hgrow="ALWAYS">
+            <!-- Top bar -->
+            <HBox alignment="CENTER_RIGHT" prefHeight="80.0" spacing="16.0" styleClass="topbar">
+                <children>
+                    <Region HBox.hgrow="ALWAYS" />
+                    <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="topbar-profile">
+                        <children>
+                            <ImageView fitHeight="42.0" fitWidth="42.0" preserveRatio="true">
+                                <image>
+                                    <Image url="@Icons/man.png" />
+                                </image>
+                                <clip>
+                                    <Circle centerX="21.0" centerY="21.0" radius="21.0" />
+                                </clip>
+                            </ImageView>
+                            <VBox alignment="CENTER_LEFT" spacing="2.0">
+                                <children>
+                                    <Label fx:id="profileNameLabel" styleClass="profile-name" text="Mariam" />
+                                    <Label fx:id="profileSubtitleLabel" styleClass="profile-subtitle" text="Computer Science Major" />
+                                </children>
+                            </VBox>
+                        </children>
+                    </HBox>
+                </children>
+            </HBox>
+            
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="mc-scroll" vbarPolicy="AS_NEEDED" VBox.vgrow="ALWAYS">
+                <content>
+                <VBox spacing="28.0" styleClass="mc-content">
+                    <children>
+
+                        <!-- PAGE HEADER + STAT CARDS -->
+                        <HBox alignment="CENTER_LEFT" spacing="24.0">
+                            <children>
+                                <VBox spacing="6.0" HBox.hgrow="ALWAYS">
+                                    <Label styleClass="mc-page-title" text="My Courses" />
+                                    <Label styleClass="mc-page-subtitle" text="Manage your active enrollments and view academic history." />
+                                </VBox>
+                                <HBox alignment="CENTER_LEFT" spacing="14.0" styleClass="mc-stat-card">
+                                    <VBox alignment="CENTER" styleClass="mc-stat-icon-box mc-stat-icon-purple">
+                                        <ImageView fitHeight="22.0" fitWidth="22.0" preserveRatio="true"><image><Image url="@Icons/open-book.png" /></image></ImageView>
+                                    </VBox>
+                                     <VBox spacing="2.0">
+                                         <Label styleClass="mc-stat-label" text="TOTAL CREDITS" />
+                                         <Label fx:id="totalCreditsLabel" styleClass="mc-stat-value" text="15.0" />
+                                     </VBox>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" spacing="14.0" styleClass="mc-stat-card">
+                                    <VBox alignment="CENTER" styleClass="mc-stat-icon-box mc-stat-icon-green">
+                                        <ImageView fitHeight="22.0" fitWidth="22.0" preserveRatio="true"><image><Image url="@Icons/check.png" /></image></ImageView>
+                                    </VBox>
+                                     <VBox spacing="2.0">
+                                         <Label styleClass="mc-stat-label" text="CUMULATIVE GPA" />
+                                         <Label fx:id="cumulativeGpaLabel" styleClass="mc-stat-value" text="3.84" />
+                                     </VBox>
+                                </HBox>
+                            </children>
+                        </HBox>
+
+                        <!-- ══════ CURRENT ENROLLMENTS ══════ -->
+                        <VBox spacing="14.0">
+                            <HBox alignment="CENTER_LEFT">
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <Pane maxHeight="26.0" maxWidth="4.0" minHeight="26.0" minWidth="4.0" prefHeight="26.0" prefWidth="4.0" styleClass="mc-section-accent" />
+                                    <Label styleClass="mc-section-title" text="Current Enrollments" />
+                                </HBox>
+                                <Region HBox.hgrow="ALWAYS" />
+                                <Label styleClass="mc-term-badge" text="Fall 2023 Semester" />
+                            </HBox>
+
+                            <VBox styleClass="mc-table-card">
+                                <!-- Fixed Header -->
+                                <HBox alignment="CENTER_LEFT" styleClass="mc-table-header">
+                                    <Label minWidth="130" prefWidth="130" styleClass="mc-th" text="COURSE CODE" />
+                                    <Label minWidth="350" prefWidth="350" styleClass="mc-th" text="COURSE NAME" />
+                                    <Label minWidth="200" prefWidth="200" styleClass="mc-th" text="INSTRUCTOR" />
+                                    <Label minWidth="100" prefWidth="100" styleClass="mc-th" text="CREDITS" />
+                                    <Label minWidth="150" prefWidth="150" styleClass="mc-th" text="STATUS" />
+                                    <Region HBox.hgrow="ALWAYS" />
+                                </HBox>
+                                <!-- Scrollable body -->
+                                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxHeight="350" styleClass="mc-table-scroll" vbarPolicy="AS_NEEDED">
+                                    <VBox fx:id="currentEnrollmentsContainer" />
+                                </ScrollPane>
+                            </VBox>
+                        </VBox>
+
+                        <!-- ══════ COURSE HISTORY ══════ -->
+                        <VBox spacing="14.0">
+                            <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                <Pane maxHeight="26.0" maxWidth="4.0" minHeight="26.0" minWidth="4.0" prefHeight="26.0" prefWidth="4.0" styleClass="mc-section-accent" />
+                                <Label styleClass="mc-section-title" text="Course History" />
+                            </HBox>
+
+                            <VBox styleClass="mc-table-card">
+                                <!-- Fixed Header -->
+                                <HBox alignment="CENTER_LEFT" styleClass="mc-table-header">
+                                    <Label minWidth="130" prefWidth="130" styleClass="mc-th" text="COURSE CODE" />
+                                    <Label minWidth="400" prefWidth="400" styleClass="mc-th" text="COURSE NAME" />
+                                    <Label minWidth="100" prefWidth="100" styleClass="mc-th" text="CREDITS" />
+                                    <Label minWidth="100" prefWidth="100" styleClass="mc-th" text="GRADE" />
+                                    <Label minWidth="150" prefWidth="150" styleClass="mc-th" text="STATUS" />
+                                    <Region HBox.hgrow="ALWAYS" />
+                                </HBox>
+                                <!-- Scrollable body -->
+                                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxHeight="400" styleClass="mc-table-scroll" vbarPolicy="AS_NEEDED">
+                                    <VBox fx:id="courseHistoryContainer" />
+                                </ScrollPane>
+                            </VBox>
+                        </VBox>
+
+
+                        <!-- ══════ STATUS ROW ══════ -->
+                        <HBox alignment="CENTER_LEFT" spacing="48.0" styleClass="mc-status-row">
+                            <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                <Pane maxHeight="8.0" maxWidth="8.0" minHeight="8.0" minWidth="8.0" prefHeight="8.0" prefWidth="8.0" styleClass="mc-dot mc-dot-blue" />
+                                <Label styleClass="mc-status-text" text="UI Layer : Active" />
+                            </HBox>
+                            <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                <Pane maxHeight="8.0" maxWidth="8.0" minHeight="8.0" minWidth="8.0" prefHeight="8.0" prefWidth="8.0" styleClass="mc-dot mc-dot-green" />
+                                <Label styleClass="mc-status-text" text="Service Layer : Optimal" />
+                            </HBox>
+                            <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                <Pane maxHeight="8.0" maxWidth="8.0" minHeight="8.0" minWidth="8.0" prefHeight="8.0" prefWidth="8.0" styleClass="mc-dot mc-dot-indigo" />
+                                <Label styleClass="mc-status-text" text="Data Layer : Synced" />
+                            </HBox>
+                            <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                <Pane maxHeight="8.0" maxWidth="8.0" minHeight="8.0" minWidth="8.0" prefHeight="8.0" prefWidth="8.0" styleClass="mc-dot mc-dot-amber" />
+                                <Label styleClass="mc-status-text" text="Last Update : 2m ago" />
+                            </HBox>
+                        </HBox>
+
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+        </VBox>
+
+    </children>
+</HBox>

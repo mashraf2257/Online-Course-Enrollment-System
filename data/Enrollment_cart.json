@@ -1,0 +1,19 @@
+[ {
+  "studentId" : "112",
+  "courseId" : "MATH203",
+  "timestamp" : [ 2026, 5, 10, 4, 49, 1, 275217900 ],
+  "status" : "Waiting for approval",
+  "queuePosition" : 0
+}, {
+  "studentId" : "112",
+  "courseId" : "BIO101",
+  "timestamp" : [ 2026, 5, 10, 4, 49, 2, 596950200 ],
+  "status" : "Waiting for approval",
+  "queuePosition" : 0
+}, {
+  "studentId" : "112",
+  "courseId" : "MATH101",
+  "timestamp" : [ 2026, 5, 10, 4, 49, 4, 205379400 ],
+  "status" : "Waiting for approval",
+  "queuePosition" : 0
+} ]

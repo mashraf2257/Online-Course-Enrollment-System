@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.advanced_project.online_course_enrollment.controller.RecommendationController">
+    <children>
+        <VBox spacing="24.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <padding>
+                <Insets bottom="32.0" left="40.0" right="40.0" top="32.0" />
+            </padding>
+            <children>
+                <!-- Top Selection Card -->
+                <VBox spacing="18.0" styleClass="admin-card">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" spacing="14.0" styleClass="admin">
+                            <children>
+                                <StackPane styleClass="enrollment-add-icon">
+                                    <children>
+                                        <Label styleClass="enrollment-add-symbol" text="+" />
+                                    </children>
+                                </StackPane>
+                                <VBox spacing="4.0">
+                                    <children>
+                                        <Label styleClass="enrollment-card-heading" text="Recommendation" />
+                                        <Label styleClass="enrollment-small-text" text="Pick a student and recommend a course" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+
+                        <GridPane hgap="18.0" vgap="9.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="ALWAYS" percentWidth="100.0" />
+                            </columnConstraints>
+                            <children>
+                                <Label styleClass="enrollment-field-label" text="STUDENT" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <ComboBox fx:id="studentComboBox" maxWidth="Infinity" prefHeight="42.0" promptText="- Select a student -" styleClass="enrollment-combo" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                                <HBox fx:id="selectedStudentCard" alignment="CENTER_LEFT" managed="false" spacing="12.0" styleClass="enrollment-selected-card" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                                    <children>
+                                        <StackPane styleClass="enrollment-avatar">
+                                            <children>
+                                                <Label fx:id="studentInitialsLabel" styleClass="enrollment-avatar-text" text="AL" />
+                                            </children>
+                                        </StackPane>
+                                        <VBox spacing="2.0">
+                                            <children>
+                                                <Label fx:id="selectedStudentNameLabel" styleClass="enrollment-selected-title" text="Alex Morgan" />
+                                                <Label fx:id="selectedStudentMetaLabel" styleClass="enrollment-small-text" text="GPA 3.60 - Year 2" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                            <rowConstraints>
+                                <RowConstraints />
+                                <RowConstraints />
+                                <RowConstraints />
+                            </rowConstraints>
+                        </GridPane>
+
+                        <HBox alignment="CENTER_LEFT">
+                            <children>
+                                <Label styleClass="enrollment-small-text" text="Select a student to see AI-powered course recommendations." />
+                                <Region HBox.hgrow="ALWAYS" />
+                                <Button minHeight="44.0" onAction="#generateRecommendations" prefHeight="44.0" styleClass="admin-button" text="Get Recommendations">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+
+                        <Label fx:id="enrollmentMessageLabel" managed="false" text="" visible="false" />
+                    </children>
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                </VBox>
+
+                <!-- Recommendations Scroll Area -->
+                <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Label styleClass="enrollment-field-label" text="COURSE SUGGESTIONS" />
+                        <ScrollPane fitToWidth="true" styleClass="scroll-bar" VBox.vgrow="ALWAYS">
+                            <content>
+                                <VBox fx:id="recommendationsContainer" spacing="14" style="-fx-background-color: transparent;">
+                                    <padding>
+                                        <Insets bottom="10.0" left="2.0" right="10.0" top="2.0" />
+                                    </padding>
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+    <stylesheets>
+        <URL value="@../../theme.css" />
+        <URL value="@../../../../example/student_uifx/theme.css" />
+    </stylesheets>
+</AnchorPane>
